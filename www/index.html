@@ -7,13 +7,58 @@
 -->
 <html lang="en">
     <head>
-        <title>Cordova Application template</title>
+        <title>Fat tracker</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/custom.min.css"/>
         <meta charset="utf-8"/>
     </head>
     <body>
-        <div id="main_page"></div>
+     <!--    <div  data-role="page">
+            <div data-role="footer" style="overflow:hidden;">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#">Back</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>  -->
+
+        <div data-role="page" id="foo">
+
+            <div data-role="header">
+                <h1>Foo</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <p>I'm first in the source order so I'm shown as the page.</p>
+                <p>View internal page called <a href="#bar">bar</a></p>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+        <!-- Start of second page -->
+        <div data-role="page" id="bar">
+
+            <div data-role="header">
+                <h1>Bar</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+                <p><a href="#foo">Back to foo</a></p>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+       
         <script src="cordova.js" type="text/javascript" ></script>
         <!-- This's  all yours uglify and minify scripts for production -->
         <script src="scripts/main.min.js" type="text/javascript"></script>

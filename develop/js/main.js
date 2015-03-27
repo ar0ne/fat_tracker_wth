@@ -55,7 +55,7 @@
         **/  
         that.init = function () {
             // Put your code here ...
-            $('#main_page').append('<h1>Hello world!!</h1>');
+            $('#main_page').append('<h1>Hello my fat world!!</h1>');
         }
 
         return that;
@@ -73,23 +73,16 @@
 
             $( function () {
     
-                /**
-                *  If you want to replace standard alerts for more native notifications 
-                *  install this and remove slashes
-                * 
-                *  $ cordova plugin add org.apache.cordova.dialogs
-                *
-                **/
-                // if (navigator.notification) { // Override default HTML alert with native dialog
-                //     window.alert = function (message) {
-                //         navigator.notification.alert(
-                //             message,    // message
-                //             null,       // callback
-                //             "Error",    // title
-                //             'OK'        // buttonName
-                //         );
-                //     };
-                // }
+                if (navigator.notification) { // Override default HTML alert with native dialog
+                    window.alert = function (message) {
+                        navigator.notification.alert(
+                            message,    // message
+                            null,       // callback
+                            "Error",    // title
+                            'OK'        // buttonName
+                        );
+                    };
+                }
 
 
                 /**
@@ -98,7 +91,7 @@
                 *  $ cordova plugin add org.apache.cordova.splashscreen
                 * 
                 **/
-                // navigator.splashscreen.show();
+                navigator.splashscreen.show();
 
                 // register FastClick
                 if (FastClick) {
