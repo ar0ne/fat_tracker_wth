@@ -1,9 +1,9 @@
 {
-  "name": "Your App",
+  "name": "Fat tracker",
   "version": "0.0.1",
-  "description": "Something intresting about your application",
+  "description": "EAT!EAT!EAT!",
   "authors": [
-    "Your name"
+    "Serj Ar[]one"
   ],
   "license": "MIT",
   "homepage": "",
@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.3",
-    "fastclick": "~1.0.3"
+    "fastclick": "~1.0.3",
+    "jquery-mobile": "1.4.5"
   }
 }

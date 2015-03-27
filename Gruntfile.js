@@ -9,8 +9,10 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
+              
               'bower_components/**/jquery.min.js',
               'bower_components/**/fastclick.js',
+             // 'bower_components/**/jquery.mobile.js',
               // add other dependent scripts from bower.json
               // ... 
 
@@ -21,6 +23,7 @@ module.exports = function(grunt) {
       },
       css: {
         src: [
+              'bower_components/**/jquery.mobile.css',
               'develop/**/*.css',
               '!develop/tmp/*',
             ],
@@ -29,7 +32,7 @@ module.exports = function(grunt) {
     },
     uglify: {
       options : {
-        banner : '/*\n Author: Your name\n Date: <%= grunt.template.today("yyyy-mm-dd") %>\n e-mail: email@email.com\n*/\n'
+        banner : '/*\n Author: Serj Ar[]ne\n Date: <%= grunt.template.today("yyyy-mm-dd") %>\n e-mail: serj.ar0ne@gmail.com\n*/\n'
       },
       dist: {
         files: {
@@ -41,7 +44,7 @@ module.exports = function(grunt) {
     cssmin: {
       main : {
         options : {
-          banner : '/*\n Author: Your name\n Date: <%= grunt.template.today("yyyy-mm-dd") %>\n e-mail: email@email.com\n*/\n'
+          banner : '/*\n Author: Serj Ar[]ne\n Date: <%= grunt.template.today("yyyy-mm-dd") %>\n e-mail: serj.ar0ne@gmail.com\n*/\n'
         },
         files : {
           "www/styles/custom.min.css" : ['<%= concat.css.dest %>'],
