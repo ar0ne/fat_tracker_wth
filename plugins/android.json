@@ -19,6 +19,10 @@
                         {
                             "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -43,6 +47,9 @@
             "PACKAGE_NAME": "org.ar0ne.fat_tracker"
         },
         "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "org.ar0ne.fat_tracker"
+        },
+        "org.apache.cordova.device-motion": {
             "PACKAGE_NAME": "org.ar0ne.fat_tracker"
         }
     },

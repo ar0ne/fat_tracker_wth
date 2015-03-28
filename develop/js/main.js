@@ -54,9 +54,8 @@
         *   Inittialization of application
         **/  
         that.init = function () {
-            // Put your code here ...
-            //$('#main_page').append('<h1>Hello my fat world!!</h1>');
-           
+            
+                       
             $( document ).on( "swipeleft swiperight", "#learn_1", function( e ) {
                 if ( e.type === "swipeleft" ) {
                     $.mobile.navigate("#learn_2", {
@@ -117,13 +116,12 @@
 
 
             $.event.special.swipe.horizontalDistanceThreshold = (screen.availWidth) / 80; 
-
             $.event.special.swipe.verticalDistanceThreshold = (screen.availHeight) / 13; 
-            $.event.special.swipe.durationThreshold = 1000; // (default: 1000) (milliseconds) – More time than this, and it isn't a swipe.
+            $.event.special.swipe.durationThreshold = 1000; 
 
 
 
-            $("#sit_timer_stop").hide();
+            $("#sit_timer_stop, #countdown").hide();
 
 
             $('#eat, #tv, #sit').bind('pageshow', function() {
@@ -133,34 +131,188 @@
                 })
                 $(link).addClass("active");
                 if(link !== "tv"){
-                    $('#countdown').timeTo("reset");
+                    //$('#countdown').timeTo("stop");
                     $("#sit_timer_start").show();
                     $("#sit_timer_stop").hide();
                 }
             });
 
+
+            var acc_init = {};
+            var watchID;
+            var isFirst = true;
+            var acc_check = {}; 
+
+
             $("#sit_timer_start").on("click",function(){
-                $("#sit_timer_stop").show();
+                
                 $("#sit_timer_start").hide();
-                $('#countdown').timeTo({ 
+                $("#sit_timer_stop").show();
+
+                $('#countdown').show().timeTo({ 
                     seconds: 100,
-                    fontSize: 38,
-                }, function(){ 
-                    alert('Countdown finished'); 
+                    fontSize: 38
                 });
+                // }, function(){ 
+                //     if(that.isCordova()) {
+                //        navigator.accelerometer.clearWatch(watchID);
+                //        acc_init = {};
+                //        acc_check = {};
+                //        isFirst = true;
+                //     }
+                // });
+
+
+                if(that.isCordova()) {
+
+                    var options = { frequency: 3000 };  // Update every 3 seconds
+
+                    watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+
+                    function onSuccess(acceleration){
+                        if(isFirst) {
+                            isFirst = false;
+                            acc_init.x = acceleration.x > 0 ? true : false;
+                            acc_init.y = acceleration.y > 0 ? true : false;
+                            acc_init.z = acceleration.z > 0 ? true : false;
+                        } else {
+                            acc_check.x = acceleration.x > 0 ? true : false;
+                            acc_check.y = acceleration.y > 0 ? true : false;
+                            acc_check.z = acceleration.z > 0 ? true : false;
+
+                            if( acc_check.x != acc_init.x ||
+                                acc_check.y != acc_init.y ||
+                                acc_check.z != acc_init.z ) {
+                                    navigator.accelerometer.clearWatch(watchID);
+                                    $("#sit_timer_start").show();
+                                    $("#sit_timer_stop").hide();
+                                    $("#countdown").hide();
+                                    isFirst = true;
+                                    alert("Failed");
+
+                            }
+                        }
+                    }
+
+                    function onError(){
+                        navigator.accelerometer.clearWatch(watchID);
+                    }
+                }
             });
 
             $("#sit_timer_stop").on("click",function(){
                 $("#sit_timer_start").show();
                 $("#sit_timer_stop").hide();
-                $('#countdown').timeTo("reset");
+                //$('#countdown').timeTo("stop");
+                $("#countdown").hide();
+
             });
+
+
+               
+
+            //     if(that.isCordova()) {
+
+            //         function onSuccess(acceleration) {
+
+            //             if(!motion_init_options) {
+            //                 motion_init_options = true;
+
+            //                 acc.x = acceleration.x >= 0 ? true: false;
+            //                 acc.y = acceleration.y >= 0 ? true: false;
+            //                 acc.z = acceleration.z >= 0 ? true: false;
+
+            //             } else {
+
+            //                 //navigator.accelerometer.clearWatch(watchID);
+
+            //                 function onSuccess(acceleration) {
+
+            //                     navigator.accelerometer.clearWatch(watchID);
+
+            //                     console.log('LOL');
+
+            //                     check.x = acceleration.x >= 0 ? true: false;
+            //                     check.y = acceleration.y >= 0 ? true: false;
+            //                     check.z = acceleration.z >= 0 ? true: false;
+
+            //                     if( acc.x == check.x &&
+            //                         acc.y == check.y &&
+            //                         acc.z == check.z) {
+            //                             motion_status = true;
+            //                     }
+
+            //                     if(!motion_status) {
+            //                         console.log("You failed!");
+            //                         navigator.accelerometer.clearWatch(watchID);
+            //                         $('#countdown').timeTo("stop");
+            //                         alert("FAil");
+
+            //                     } else {
+            //                         console.log("OK!");
+            //                         motion_status = false;
+            //                         return;
+            //                     }
+
+            //                 };
+
+            //                 function onError() {
+            //                     alert('onError!');
+            //                 };
+
+            //                 watchID = navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+
+            //                 navigator.accelerometer.clearWatch(watchID);
+            //             }
+
+            //         };
+
+            //         function onError() {
+            //             alert('onError!');
+            //         };
+
+            //         var options = { frequency: 3000 };  // Update every 3 seconds
+
+            //         watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+            //     }
+               
+            //     $('#countdown').timeTo({ 
+            //         seconds: 15,
+            //         fontSize: 38,
+            //     }, function(){ 
+            //         if(that.isCordova()) {
+            //             if()
+            //             navigator.accelerometer.clearWatch(watchID);
+            //             acc = {};
+            //             motion_init_options = false;
+            //             motion_status = false;
+            //             check = {};
+            //         }
+
+            //     });
+            // });
+
+            // $("#sit_timer_stop").on("click",function(){
+            //     $("#sit_timer_start").show();
+            //     $("#sit_timer_stop").hide();
+            //     $('#countdown').timeTo("reset");
+            //     if(that.isCordova()) {
+            //         navigator.accelerometer.clearWatch(watchID);
+            //         acc = {};
+            //         motion_init_options = false;
+            //         motion_status = false;
+            //         check = {};
+
+            //     }
+            // });
+
 
 
 
             
 
         }
+
 
 
         return that;
@@ -189,13 +341,6 @@
                     };
                 }
 
-
-                /**
-                *  If you want to show splashcreen install plugin amd remove slashes
-                *
-                *  $ cordova plugin add org.apache.cordova.splashscreen
-                * 
-                **/
                 navigator.splashscreen.show();
 
                 // register FastClick
@@ -203,6 +348,8 @@
                     FastClick.attach(document.body);
                 }
                 
+                
+
                
             });
 

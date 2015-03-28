@@ -37,4 +37,6 @@
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen.class \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen$5.class \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen$2.class \
+/home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/ant-build/classes/org/apache/cordova/devicemotion/AccelListener$1.class \
+/home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/ant-build/classes/org/apache/cordova/devicemotion/AccelListener.class \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/ant-build/dexedLibs/classes-5186af293b2503fd5d6fb50728dcb083.jar \

@@ -101,7 +101,7 @@ body :not(INPUT):not(TEXTAREA) {
 .ui-link:hover, .ui-link.active {
 	background-color: #512DA8 !important;
 }
-#countdown {
+#countdown , #clock{
 	margin: 0 auto;
 	text-align: center;
 }
