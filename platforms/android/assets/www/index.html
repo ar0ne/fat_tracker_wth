@@ -92,18 +92,73 @@
 
         <div data-role="page" id="main_page">
 
-<!--             <div data-role="header">
-                <h1>Bar</h1>
-            </div> -->
-
             <div role="main" class="ui-content">
-                <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+                <p>Главная.</p>
             </div>
 
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
-                <h4>Page Footer</h4>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#eat" data-transition="slide">Eat</a></li>
+                        <li><a href="#sit" data-transition="slide">Sit</a></li>
+                        <li><a href="#tv"  data-transition="slide">TV</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
+
+
+        <div data-role="page" id="eat">
+
+            <div role="main" class="ui-content">
+                <p>Eat please!</p>
+            </div>
+
+            <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#eat" data-transition="slidedown" class="eat_footer">Eat</a></li>
+                        <li><a href="#sit" data-transition="slidedown" class="sit_footer">Sit</a></li>
+                        <li><a href="#tv"  data-transition="slidedown" class="tv_footer">TV</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="page" id="sit">
+
+            <div role="main" class="ui-content">
+                <p>Sit down please</p>
+            </div>
+
+            <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#eat" data-transition="slidedown" class="eat_footer">Eat</a></li>
+                        <li><a href="#sit" data-transition="slidedown" class="sit_footer">Sit</a></li>
+                        <li><a href="#tv"  data-transition="slidedown" class="tv_footer">TV</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="page" id="tv">
+
+            <div role="main" class="ui-content">
+                <p>See tv show</p>
+            </div>
+
+            <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#eat" data-transition="slidedown" class="eat_footer">Eat</a></li>
+                        <li><a href="#sit" data-transition="slidedown" class="sit_footer">Sit</a></li>
+                        <li><a href="#tv"  data-transition="slidedown" class="tv_footer">TV</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
 
        
         <script src="cordova.js" type="text/javascript" ></script>

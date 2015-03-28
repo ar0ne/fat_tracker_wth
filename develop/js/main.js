@@ -122,10 +122,14 @@
             $.event.special.swipe.durationThreshold = 1000; // (default: 1000) (milliseconds) – More time than this, and it isn't a swipe.
 
 
-                
-           
 
-
+            $('#eat, #tv, #sit').bind('pageshow', function() {
+                var link = "." + $(this).attr("id") + "_footer";
+                $(".ui-navbar a").each(function(){
+                    $(this).removeClass("active");
+                })
+                $(link).addClass("active");
+            });
 
 
         }

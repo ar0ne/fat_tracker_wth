@@ -1,8 +1,7 @@
-/*
-* Add yours style
-*/
+
 body {
-	background: white;
+	/*background: white; */
+	-webkit-tap-highlight-color: transparent;
 }
 .image-center{
 	margin: 0 auto;
@@ -12,17 +11,86 @@ body {
 	max-width: 80%;
 }
 [data-role=footer] a {
- /* width: 100%;*/
-/*  height: 40px;*/
-  font-size: 16px !important;
+  	font-size: 16px !important;
 }
-.ui-page {
+.ui-page, div {
     backface-visibility:hidden;
     -webkit-backface-visibility:hidden; /* Chrome and Safari */
     -moz-backface-visibility:hidden; /* Firefox */
 }
-div {
-	backface-visibility:hidden;
-	-webkit-backface-visibility:hidden; /* Chrome and Safari */
-	-moz-backface-visibility:hidden; /* Firefox */
+body :not(INPUT):not(TEXTAREA) {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.ui-radio label {
+	background-color: #f9f9f9 !important;
+	border: none ;
+}
+
+.ui-radio label.ui-btn-active  {
+	background-color: #4CAF50 !important;
+	border-color: #4CAF50 !important;
+	border-radius: 0 !important;
+	text-shadow: 0 1px 0 #388e3c !important;
+}
+
+.ui-focus {
+	/*box-shadow: 0 0 12px #38c*/
+	box-shadow: none !important;
+}
+
+.ui-shadow-inset {
+	box-shadow: none !important;
+}
+
+.ui-input-text, .ui-input-search {
+	color: #555 !important;
+	border-left: none !important;
+	border-right: none !important;
+	border-top: none !important;
+	border-bottom: 1 !important;
+	/*background-color: #f9f9f9 !important;*/
+	border-radius: 0 !important;
+}
+
+.ui-btn, .ui-listview  {
+	box-shadow: none !important;
+}
+
+.ui-content fieldset {
+	text-align: center;
+}
+
+.ui-checkbox-on:after{
+	/*background-color: #4CAF50 !important;*/
+}
+
+.ui-corner-all {
+	border-radius: 0 !important;
+}
+
+.ui-listview > li a {
+	border: none !important;
+}
+
+.ui-listview > li a:hover{
+	/*background-color: #C8E6C9 !important;*/
+}
+
+.ui-header, .ui-footer, .ui-navbar {
+	background-color: red !important;
+	border: none !important;
+}
+.ui-link {
+	background-color: #673AB7 !important;
+	text-shadow: none !important;
+	color: #FFFFFF !important;
+	border: none !important;
+}
+
+.ui-link:hover, .ui-link.active {
+	background-color: #512DA8 !important;
 }
