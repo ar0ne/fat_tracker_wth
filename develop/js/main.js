@@ -209,102 +209,68 @@
             });
 
 
-               
+           $( document ).on( "pagecreate", "#eat", function() {
+               // Swipe to remove list item
+               $( document ).on( "swipeleft swiperight", "#list li", function( event ) {
+                   var listitem = $( this ),
+                       // These are the classnames used for the CSS transition
+                       dir = event.type === "swipeleft" ? "left" : "right",
+                       // Check if the browser supports the transform (3D) CSS transition
+                       transition = $.support.cssTransform3d ? dir : false;
+                       confirmAndDelete( listitem, transition );
+               });
+               // If it's not a touch device...
+               if ( ! $.mobile.support.touch ) {
+                   // Remove the class that is used to hide the delete button on touch devices
+                   $( "#list" ).removeClass( "touch" );
+                   // Click delete split-button to remove list item
+                   $( ".delete" ).on( "click", function() {
+                       var listitem = $( this ).parent( "li" );
+                       confirmAndDelete( listitem );
+                   });
+               }
+               function confirmAndDelete( listitem, transition ) {
+                   // Highlight the list item that will be removed
+                   listitem.children( ".ui-btn" ).addClass( "ui-btn-active" );
+                   // Inject topic in confirmation popup after removing any previous injected topics
+                   $( "#confirm .topic" ).remove();
+                   listitem.find( ".topic" ).clone().insertAfter( "#question" );
+                   // Show the confirmation popup
+                   $( "#confirm" ).popup( "open" );
+                   // Proceed when the user confirms
+                   $( "#confirm #yes" ).on( "click", function() {
+                       // Remove with a transition
+                       if ( transition ) {
+                           listitem
+                               // Add the class for the transition direction
+                               .addClass( transition )
+                               // When the transition is done...
+                               .on( "webkitTransitionEnd transitionend otransitionend", function() {
+                                   // ...the list item will be removed
+                                   listitem.remove();
+                                   // ...the list will be refreshed and the temporary class for border styling removed
+                                   $( "#list" ).listview( "refresh" ).find( ".border-bottom" ).removeClass( "border-bottom" );
+                               })
+                               // During the transition the previous button gets bottom border
+                               .prev( "li" ).children( "a" ).addClass( "border-bottom" )
+                               // Remove the highlight
+                               .end().end().children( ".ui-btn" ).removeClass( "ui-btn-active" );
+                       }
+                       // If it's not a touch device or the CSS transition isn't supported just remove the list item and refresh the list
+                       else {
+                           listitem.remove();
+                           $( "#list" ).listview( "refresh" );
+                       }
+                   });
+                   // Remove active state and unbind when the cancel button is clicked
+                   $( "#confirm #cancel" ).on( "click", function() {
+                       listitem.children( ".ui-btn" ).removeClass( "ui-btn-active" );
+                       $( "#confirm #yes" ).off();
+                   });
+               }
+           });    
 
-            //     if(that.isCordova()) {
-
-            //         function onSuccess(acceleration) {
-
-            //             if(!motion_init_options) {
-            //                 motion_init_options = true;
-
-            //                 acc.x = acceleration.x >= 0 ? true: false;
-            //                 acc.y = acceleration.y >= 0 ? true: false;
-            //                 acc.z = acceleration.z >= 0 ? true: false;
-
-            //             } else {
-
-            //                 //navigator.accelerometer.clearWatch(watchID);
-
-            //                 function onSuccess(acceleration) {
-
-            //                     navigator.accelerometer.clearWatch(watchID);
-
-            //                     console.log('LOL');
-
-            //                     check.x = acceleration.x >= 0 ? true: false;
-            //                     check.y = acceleration.y >= 0 ? true: false;
-            //                     check.z = acceleration.z >= 0 ? true: false;
-
-            //                     if( acc.x == check.x &&
-            //                         acc.y == check.y &&
-            //                         acc.z == check.z) {
-            //                             motion_status = true;
-            //                     }
-
-            //                     if(!motion_status) {
-            //                         console.log("You failed!");
-            //                         navigator.accelerometer.clearWatch(watchID);
-            //                         $('#countdown').timeTo("stop");
-            //                         alert("FAil");
-
-            //                     } else {
-            //                         console.log("OK!");
-            //                         motion_status = false;
-            //                         return;
-            //                     }
-
-            //                 };
-
-            //                 function onError() {
-            //                     alert('onError!');
-            //                 };
-
-            //                 watchID = navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
-
-            //                 navigator.accelerometer.clearWatch(watchID);
-            //             }
-
-            //         };
-
-            //         function onError() {
-            //             alert('onError!');
-            //         };
-
-            //         var options = { frequency: 3000 };  // Update every 3 seconds
-
-            //         watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
-            //     }
-               
-            //     $('#countdown').timeTo({ 
-            //         seconds: 15,
-            //         fontSize: 38,
-            //     }, function(){ 
-            //         if(that.isCordova()) {
-            //             if()
-            //             navigator.accelerometer.clearWatch(watchID);
-            //             acc = {};
-            //             motion_init_options = false;
-            //             motion_status = false;
-            //             check = {};
-            //         }
-
-            //     });
-            // });
-
-            // $("#sit_timer_stop").on("click",function(){
-            //     $("#sit_timer_start").show();
-            //     $("#sit_timer_stop").hide();
-            //     $('#countdown').timeTo("reset");
-            //     if(that.isCordova()) {
-            //         navigator.accelerometer.clearWatch(watchID);
-            //         acc = {};
-            //         motion_init_options = false;
-            //         motion_status = false;
-            //         check = {};
-
-            //     }
-            // });
+           
 
 
 

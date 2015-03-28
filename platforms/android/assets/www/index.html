@@ -99,7 +99,7 @@
 
             <div role="main" class="ui-content" style="padding: 0;">
                 <img src="images/fastfood.jpg" class="image-top-center" style="width:100%; height: auto;" />                    
-                <ul data-role="listview" style="padding: 1em;">
+                <ul data-role="listview" style="padding: 1em;" id="list">
                     <li><a href="#">Гамбургер 1шт.</a></li>
                     <li><a href="#">Беляш 2шт.</a></li>
                     <li><a href="#">Хот-дог 2шт.</a></li>
@@ -121,6 +121,21 @@
                     </ul>
                 </div>
             </div>
+
+            <div id="confirm" class="ui-content" data-role="popup" data-theme="a">
+                <p id="question">Are you sure you want to delete:</p>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a id="yes" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Yes</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a id="cancel" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Cancel</a>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
 
         <div data-role="page" id="sit">
