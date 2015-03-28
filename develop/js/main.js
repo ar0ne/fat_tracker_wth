@@ -57,9 +57,48 @@
             // Put your code here ...
             //$('#main_page').append('<h1>Hello my fat world!!</h1>');
            
+            $( document ).on( "swipeleft swiperight", "#learn_1", function( e ) {
+                if ( e.type === "swipeleft" ) {
+                    $.mobile.changePage("#learn_2");
+                }
+            });
 
-            
+            $( document ).on( "swipeleft swiperight", "#learn_2", function( e ) {
+                if ( e.type === "swipeleft" ) {
+                    $.mobile.changePage("#learn_3");
+                } else if ( e.type === "swiperight" ) {
+                    $.mobile.changePage("#learn_1");
+                }
+            });
+
+            $( document ).on( "swipeleft swiperight", "#learn_3", function( e ) {
+                if ( e.type === "swipeleft" ) {
+                    $.mobile.changePage("#learn_4");
+                } else if ( e.type === "swiperight" ) {
+                    $.mobile.changePage("#learn_2");
+                }
+            });
+
+            $( document ).on( "swipeleft swiperight", "#learn_4", function( e ) {
+                if ( e.type === "swipeleft" ) {
+                    $.mobile.changePage("#main_page");
+                } else if ( e.type === "swiperight" ) {
+                    $.mobile.changePage("#learn_3");
+                }
+            });
+
+            $(document).bind("mobileinit", function(){
+             $.extend(  $.mobile , {
+             defaultPageTransition: 'none' 
+            });
+
+             $.mobile.defaultPageTransition = 'none';
+             $.mobile.defaultDialogTransition = 'none';
+            });
+
+
         }
+
 
         return that;
 

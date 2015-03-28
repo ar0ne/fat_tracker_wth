@@ -16,3 +16,11 @@ body {
 /*  height: 40px;*/
   font-size: 16px !important;
 }
+.ui-page {
+    -webkit-backface-visibility: hidden;
+}
+div {
+	backface-visibility:hidden;
+	-webkit-backface-visibility:hidden; /* Chrome and Safari */
+	-moz-backface-visibility:hidden; /* Firefox */
+}
