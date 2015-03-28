@@ -5,6 +5,7 @@
 
         var that = {};
 
+
         /** 
         * @return   true   if we started index.html on devices
         *           false  if that is browser on PC
@@ -145,14 +146,16 @@
 
 
             $("#sit_timer_start").on("click",function(){
-                
+               
                 $("#sit_timer_start").hide();
                 $("#sit_timer_stop").show();
 
                 $('#countdown').show().timeTo({ 
-                    seconds: 100,
+                    seconds: Math.floor(Math.random() * (200 - 50 + 1)) + 50,
                     fontSize: 38
                 });
+
+
                 // }, function(){ 
                 //     if(that.isCordova()) {
                 //        navigator.accelerometer.clearWatch(watchID);
@@ -165,7 +168,7 @@
 
                 if(that.isCordova()) {
 
-                    var options = { frequency: 3000 };  // Update every 3 seconds
+                    var options = { frequency: 2000 };  // Update every 2 seconds
 
                     watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 

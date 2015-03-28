@@ -188,4 +188,10 @@ ul.touch li.ui-li-has-alt a.ui-btn {
 #eat p {
 	color: #FFFFFF;
 	font-weight: normal;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#question, #question_complete{
+	color: #212121 !important;
 }
