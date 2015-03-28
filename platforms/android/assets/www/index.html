@@ -13,18 +13,6 @@
         <meta charset="utf-8"/>
     </head>
     <body>
-     <!--    <div  data-role="page">
-            <div data-role="footer" style="overflow:hidden;">
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#">Back</a></li>
-                        <li><a href="#">Next</a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>  -->
-
         <div data-role="page" id="learn_1">
 
             <div role="main" class="ui-content">
@@ -99,9 +87,8 @@
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#eat" data-transition="slide">Eat</a></li>
-                        <li><a href="#sit" data-transition="slide">Sit</a></li>
-                        
+                        <li><a href="#eat" data-transition="none">Eat</a></li>
+                        <li><a href="#sit" data-transition="none">Sit</a></li>
                     </ul>
                 </div>
             </div>
@@ -110,15 +97,26 @@
 
         <div data-role="page" id="eat">
 
-            <div role="main" class="ui-content">
-                <p>Eat please!</p>
+            <div role="main" class="ui-content" style="padding: 0;">
+                <img src="images/fastfood.jpg" class="image-top-center" style="width:100%; height: auto;" />                    
+                <ul data-role="listview" style="padding: 1em;">
+                    <li><a href="#">Гамбургер 1шт.</a></li>
+                    <li><a href="#">Беляш 2шт.</a></li>
+                    <li><a href="#">Хот-дог 2шт.</a></li>
+                    <li><a href="#">200 гр. майонеза</a></li>
+                    <li><a href="#">Куриные ножки 3шт.</a></li>
+                    <li><a href="#">Картофель 400гр.</a></li>
+                    <li><a href="#">Чипсы 150гр.</a></li>
+                    <li><a href="#">Шоколад 100гр.</a></li>
+                    <li><a href="#">Содовая 1л.</a></li>
+                </ul>
             </div>
 
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#eat" data-transition="slidedown" class="eat_footer">Eat</a></li>
-                        <li><a href="#sit" data-transition="slidedown" class="sit_footer">Sit</a></li>
+                        <li><a href="#eat" data-transition="none" class="eat_footer">Eat</a></li>
+                        <li><a href="#sit" data-transition="none" class="sit_footer">Sit</a></li>
                         
                     </ul>
                 </div>

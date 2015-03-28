@@ -108,3 +108,12 @@ body :not(INPUT):not(TEXTAREA) {
 #sit_timer_stop, #sit_timer_start {
 	margin-top: 2em;
 }
+.image-top-center {
+	width: 100% !important;
+	height: auto !important;
+	margin: 0 !important;
+}
+.ui-listview li a:hover{
+	background-color: #D1C4E9 !important;
+}
+

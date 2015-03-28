@@ -60,4 +60,5 @@
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/images/sofa2.png \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/images/sofa.png \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/images/kur.png \
+/home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/images/fastfood.jpg \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/ant-build/AndroidManifest.xml \
