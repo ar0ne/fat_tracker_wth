@@ -123,14 +123,42 @@
 
 
 
+            $("#sit_timer_stop").hide();
+
+
             $('#eat, #tv, #sit').bind('pageshow', function() {
                 var link = "." + $(this).attr("id") + "_footer";
                 $(".ui-navbar a").each(function(){
                     $(this).removeClass("active");
                 })
                 $(link).addClass("active");
+                if(link !== "tv"){
+                    $('#countdown').timeTo("reset");
+                    $("#sit_timer_start").show();
+                    $("#sit_timer_stop").hide();
+                }
             });
 
+            $("#sit_timer_start").on("click",function(){
+                $("#sit_timer_stop").show();
+                $("#sit_timer_start").hide();
+                $('#countdown').timeTo({ 
+                    seconds: 100,
+                    fontSize: 38,
+                }, function(){ 
+                    alert('Countdown finished'); 
+                });
+            });
+
+            $("#sit_timer_stop").on("click",function(){
+                $("#sit_timer_start").show();
+                $("#sit_timer_stop").hide();
+                $('#countdown').timeTo("reset");
+            });
+
+
+
+            
 
         }
 

@@ -58,7 +58,14 @@ body :not(INPUT):not(TEXTAREA) {
 
 .ui-btn, .ui-listview  {
 	box-shadow: none !important;
+	background-color: #673AB7 !important;
+	color: #FFFFFF !important;
+	text-shadow: none !important;
 }
+.ui-btn.stop {
+	background-color: #FF5722 !important;
+}
+
 
 .ui-content fieldset {
 	text-align: center;
@@ -93,4 +100,11 @@ body :not(INPUT):not(TEXTAREA) {
 
 .ui-link:hover, .ui-link.active {
 	background-color: #512DA8 !important;
+}
+#countdown {
+	margin: 0 auto;
+	text-align: center;
+}
+#sit_timer_stop, #sit_timer_start {
+	margin-top: 2em;
 }

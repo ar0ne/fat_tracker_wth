@@ -25,7 +25,8 @@ module.exports = function(grunt) {
       css: {
         src: [
               'bower_components/**/jquery.mobile-1.4.5.min.css',
-              'develop/**/*.css',
+              'develop/**/timeTo.css',
+              'develop/**/custom.css',
               '!develop/tmp/*',
             ],
         dest: 'develop/tmp/all.css',
