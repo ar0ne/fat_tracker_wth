@@ -59,31 +59,48 @@
            
             $( document ).on( "swipeleft swiperight", "#learn_1", function( e ) {
                 if ( e.type === "swipeleft" ) {
-                    $.mobile.changePage("#learn_2");
+                    $.mobile.navigate("#learn_2", {
+                        transition: "slide"
+                    });
                 }
             });
 
             $( document ).on( "swipeleft swiperight", "#learn_2", function( e ) {
                 if ( e.type === "swipeleft" ) {
-                    $.mobile.changePage("#learn_3");
+                    $.mobile.navigate("#learn_3", {
+                        transition: "slide"
+                    });
                 } else if ( e.type === "swiperight" ) {
-                    $.mobile.changePage("#learn_1");
+                    $.mobile.navigate("#learn_1", {
+                        transition: "slide",
+                        reverse: true
+                    });
                 }
             });
 
             $( document ).on( "swipeleft swiperight", "#learn_3", function( e ) {
                 if ( e.type === "swipeleft" ) {
-                    $.mobile.changePage("#learn_4");
+                    $.mobile.changePage("#learn_4", {
+                        transition: "slide"
+                    });
                 } else if ( e.type === "swiperight" ) {
-                    $.mobile.changePage("#learn_2");
+                    $.mobile.changePage("#learn_2", {
+                        transition: "slide",
+                        reverse: true
+                    });
                 }
             });
 
             $( document ).on( "swipeleft swiperight", "#learn_4", function( e ) {
                 if ( e.type === "swipeleft" ) {
-                    $.mobile.changePage("#main_page");
+                    $.mobile.changePage("#main_page", {
+                        transition: "slide"
+                    });
                 } else if ( e.type === "swiperight" ) {
-                    $.mobile.changePage("#learn_3");
+                    $.mobile.changePage("#learn_3", {
+                        transition: "slide",
+                        reverse: true
+                    });
                 }
             });
 
@@ -95,6 +112,20 @@
              $.mobile.defaultPageTransition = 'none';
              $.mobile.defaultDialogTransition = 'none';
             });
+
+            $.mobile.transitionFallbacks.slideout = "none";
+
+
+            $.event.special.swipe.horizontalDistanceThreshold = (screen.availWidth) / 80; 
+
+            $.event.special.swipe.verticalDistanceThreshold = (screen.availHeight) / 13; 
+            $.event.special.swipe.durationThreshold = 1000; // (default: 1000) (milliseconds) – More time than this, and it isn't a swipe.
+
+
+                
+           
+
+
 
 
         }
