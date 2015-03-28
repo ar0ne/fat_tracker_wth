@@ -25,38 +25,84 @@
 
         </div>  -->
 
-        <div data-role="page" id="foo">
-
-            <div data-role="header">
-                <h1>Foo</h1>
-            </div><!-- /header -->
+        <div data-role="page" id="learn_1">
 
             <div role="main" class="ui-content">
-                <p>I'm first in the source order so I'm shown as the page.</p>
-                <p>View internal page called <a href="#bar">bar</a></p>
-            </div><!-- /content -->
+                <img src="images/body.png" class="image-center"/>
+            </div>
 
             <div data-role="footer">
-                <h4>Page Footer</h4>
-            </div><!-- /footer -->
-        </div><!-- /page -->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#learn_2">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <!-- Start of second page -->
-        <div data-role="page" id="bar">
+        <div data-role="page" id="learn_2">
 
-            <div data-role="header">
+            <div role="main" class="ui-content">
+                <img src="images/kur.png" class="image-center"/>
+            </div>
+
+            <div data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#learn_1">Back</a></li>
+                        <li><a href="#learn_3">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="page" id="learn_3">
+
+            <div role="main" class="ui-content">
+                <img src="images/sofa2.png" class="image-center"/>
+            </div>
+
+            <div data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#learn_2">Back</a></li>
+                        <li><a href="#learn_4">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="page" id="learn_4">
+
+            <div role="main" class="ui-content">
+                <img src="images/tv.png" class="image-center"/>
+            </div>
+
+            <div data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#main_page">Let's go!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="main_page">
+
+<!--             <div data-role="header">
                 <h1>Bar</h1>
-            </div><!-- /header -->
+            </div> -->
 
             <div role="main" class="ui-content">
                 <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-                <p><a href="#foo">Back to foo</a></p>
-            </div><!-- /content -->
+            </div>
 
             <div data-role="footer">
                 <h4>Page Footer</h4>
-            </div><!-- /footer -->
-        </div><!-- /page -->
+            </div>
+        </div>
 
        
         <script src="cordova.js" type="text/javascript" ></script>

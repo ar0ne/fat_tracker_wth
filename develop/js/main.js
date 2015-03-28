@@ -55,7 +55,10 @@
         **/  
         that.init = function () {
             // Put your code here ...
-            $('#main_page').append('<h1>Hello my fat world!!</h1>');
+            //$('#main_page').append('<h1>Hello my fat world!!</h1>');
+           
+
+            
         }
 
         return that;
