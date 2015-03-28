@@ -30,12 +30,14 @@
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/_where-is-www.txt \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/cordova.js \
+/home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/sounds \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/scripts \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/styles \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/images \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/index.html \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/cordova_plugins.js \
+/home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/sounds/yeah.mp3 \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/org.apache.cordova.device-motion \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/org.apache.cordova.network-information \

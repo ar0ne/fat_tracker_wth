@@ -130,8 +130,8 @@
                     $(this).removeClass("active");
                 })
                 $(link).addClass("active");
-                if(link !== "tv"){
-                    //$('#countdown').timeTo("stop");
+                if(link !== "sit"){
+                    //$('#countdown').timeTo("restart");
                     $("#sit_timer_start").show();
                     $("#sit_timer_stop").hide();
                 }
@@ -211,14 +211,14 @@
 
            $( document ).on( "pagecreate", "#eat", function() {
                // Swipe to remove list item
-               $( document ).on( "swipeleft swiperight", "#list li", function( event ) {
-                   var listitem = $( this ),
-                       // These are the classnames used for the CSS transition
-                       dir = event.type === "swipeleft" ? "left" : "right",
-                       // Check if the browser supports the transform (3D) CSS transition
-                       transition = $.support.cssTransform3d ? dir : false;
-                       confirmAndDelete( listitem, transition );
-               });
+                $( document ).on( "swipeleft swiperight", "#list li", function( event ) {
+                    var listitem = $( this ),
+                        // These are the classnames used for the CSS transition
+                        dir = event.type === "swipeleft" ? "left" : "right",
+                        // Check if the browser supports the transform (3D) CSS transition
+                        transition = $.support.cssTransform3d ? dir : false;
+                        confirmAndDelete( listitem, transition );
+                    });
                // If it's not a touch device...
                if ( ! $.mobile.support.touch ) {
                    // Remove the class that is used to hide the delete button on touch devices
@@ -261,6 +261,7 @@
                            listitem.remove();
                            $( "#list" ).listview( "refresh" );
                        }
+                            
                    });
                    // Remove active state and unbind when the cancel button is clicked
                    $( "#confirm #cancel" ).on( "click", function() {
@@ -270,11 +271,14 @@
                }
            });    
 
-           
+
+     
 
 
 
+    
 
+     
             
 
         }

@@ -17,12 +17,13 @@
 
             <div role="main" class="ui-content">
                 <img src="images/body.png" class="image-center"/>
+                <p>Привет, дохляк! Вижу ты хочешь стать таким же большим ниндзяй как я! Я подготовил для тебя ряд тренировок, выполняя которые ты приблизишься к заветной цели!</p>
             </div>
 
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#learn_2" data-transition="slide">Next</a></li>
+                        <li><a href="#learn_2" data-transition="slide">Далее</a></li>
                     </ul>
                 </div>
             </div>
@@ -32,13 +33,14 @@
 
             <div role="main" class="ui-content">
                 <img src="images/kur.png" class="image-center"/>
+                <p>Чтобы стать отважным героем, ты должен хорошо питаться! Запомни мои слова, еда - это истоки твоих жизненных сил, так что возьми добавки!</p>
             </div>
 
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#learn_1" data-transition="slide" data-direction="reverse">Back</a></li>
-                        <li><a href="#learn_3" data-transition="slide">Next</a></li>
+                        <li><a href="#learn_1" data-transition="slide" data-direction="reverse">Назад</a></li>
+                        <li><a href="#learn_3" data-transition="slide">Далее</a></li>
                     </ul>
                 </div>
             </div>
@@ -48,13 +50,15 @@
 
             <div role="main" class="ui-content">
                 <img src="images/sofa2.png" class="image-center"/>
+                <p>Запомни, чем больше ты двигаешься, тем больше энергии расходуешь. Присядька!</p>
+
             </div>
 
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#learn_2" data-transition="slide" data-direction="reverse">Back</a></li>
-                        <li><a href="#learn_4" data-transition="slide">Next</a></li>
+                        <li><a href="#learn_2" data-transition="slide" data-direction="reverse">Назад</a></li>
+                        <li><a href="#learn_4" data-transition="slide">Далее</a></li>
                     </ul>
                 </div>
             </div>
@@ -64,13 +68,14 @@
 
             <div role="main" class="ui-content">
                 <img src="images/tv.png" class="image-center"/>
+                <p>Мне уже не терпиться начать наши тренировки. Так что отдохни, перекуси и можем начинать</p>
             </div>
 
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#learn_3" data-transition="slide" data-direction="reverse">Back</a></li>
-                        <li><a href="#main_page" data-transition="slide">Let's go!</a></li>
+                        <li><a href="#learn_3" data-transition="slide" data-direction="reverse">Назад</a></li>
+                        <li><a href="#main_page" data-transition="slide">Начать!</a></li>
                     </ul>
                 </div>
             </div>
@@ -81,7 +86,8 @@
         <div data-role="page" id="main_page">
 
             <div role="main" class="ui-content">
-                <p>Главная.</p>
+               
+
             </div>
 
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
@@ -98,7 +104,8 @@
         <div data-role="page" id="eat" style="background-color: #512DA8;">
 
             <div role="main" class="ui-content" style="padding: 0;">
-                <img src="images/fastfood.jpg" class="image-top-center" style="width:100%; height: auto;" />                    
+                <img src="images/fastfood.jpg" class="image-top-center" style="width:100%; height: auto;" />
+                <p>Это упражнение направленно на укрепление твоего физического состояния. Я подбираю для тебя диету специально изходя из твоего текущего уровня.</p>
                 <ul data-role="listview" style="padding: 1em;" id="list">
                     <li><a href="#">Гамбургер 1шт.</a></li>
                     <li><a href="#">Беляш 2шт.</a></li>
@@ -123,16 +130,28 @@
             </div>
 
             <div id="confirm" class="ui-content" data-role="popup" data-theme="a">
-                <p id="question">Are you sure you want to delete:</p>
+                <p id="question">Вы уверены, что уже съели это?</p>
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
-                        <a id="yes" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Yes</a>
+                        <a id="yes" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Да</a>
                     </div>
                     <div class="ui-block-b">
-                        <a id="cancel" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Cancel</a>
+                        <a id="cancel" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Нет</a>
                     </div>
                 </div>
             </div>
+
+
+            <div id="eat_complete" class="ui-content" data-role="popup" data-theme="a">
+                <p id="question_complete">Вы сегодня большой молодец, так держать!</p>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a id="yes" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Продолжить</a>
+                    </div>
+                </div>
+            </div>
+
+
 
 
 
@@ -141,10 +160,10 @@
         <div data-role="page" id="sit">
 
             <div role="main" class="ui-content">
-                <p>Sit down please</p>
+                <p>Данное упражнение направленно на развитие силы воли и твоего умения концентрироваться, тебе необходимо присесть на диван и ничего не делать, иначе придётся начать заново.</p>
                 <div id="countdown"></div>
-                <div class="ui-btn" id="sit_timer_start">Start exersies</div>
-                <div class="ui-btn stop" id="sit_timer_stop">Stop</div>
+                <div class="ui-btn" id="sit_timer_start">Начать упражнение</div>
+                <div class="ui-btn stop" id="sit_timer_stop">Остановить</div>
             </div>
 
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
