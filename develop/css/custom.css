@@ -90,7 +90,7 @@ body :not(INPUT):not(TEXTAREA) {
 }
 
 .ui-header, .ui-footer, .ui-navbar {
-	background-color: red !important;
+	background-color: #512DA8 !important;
 	border: none !important;
 }
 .ui-link {
@@ -194,4 +194,13 @@ ul.touch li.ui-li-has-alt a.ui-btn {
 
 #question, #question_complete{
 	color: #212121 !important;
+}
+
+.ui-icon-sweet {
+	background: url("images/fast-food8.png") no-repeat rgba(0, 0, 0, 0.4) !important;
+	background-size: 16px 16px !important;
+}
+
+#yandex_page .ui-content{
+	padding: 0;
 }

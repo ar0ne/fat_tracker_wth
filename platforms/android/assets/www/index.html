@@ -11,6 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/custom.min.css"/>
         <meta charset="utf-8"/>
+        <!-- <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script> -->
+        <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard,package.geoQuery&lang=ru-RU" type="text/javascript"></script>
     </head>
     <body>
         <div data-role="page" id="learn_1">
@@ -49,7 +51,7 @@
         <div data-role="page" id="learn_3">
 
             <div role="main" class="ui-content">
-                <img src="images/sofa2.png" class="image-center"/>
+                <img src="images/3.png" class="image-center"/>
                 <p>Запомни, чем больше ты двигаешься, тем больше энергии расходуешь. Присядька!</p>
 
             </div>
@@ -67,7 +69,7 @@
         <div data-role="page" id="learn_4">
 
             <div role="main" class="ui-content">
-                <img src="images/tv.png" class="image-center"/>
+                <img src="images/4.png" class="image-center"/>
                 <p>Мне уже не терпиться начать наши тренировки. Так что отдохни, перекуси и можем начинать</p>
             </div>
 
@@ -86,15 +88,15 @@
         <div data-role="page" id="main_page">
 
             <div role="main" class="ui-content">
-               
 
             </div>
 
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#eat" data-transition="none">Eat</a></li>
-                        <li><a href="#sit" data-transition="none">Sit</a></li>
+                        <li><a href="#eat" data-icon="carat-d" data-transition="none" class="eat_footer"></a></li>
+                        <li><a href="#sit" data-icon="clock" data-transition="none" class="sit_footer"></a></li>
+                        <li><a href="#yandex_page" data-icon="navigation" data-transition="none" class="yandex_footer"></a></li>
                     </ul>
                 </div>
             </div>
@@ -122,8 +124,9 @@
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#eat" data-transition="none" class="eat_footer">Eat</a></li>
-                        <li><a href="#sit" data-transition="none" class="sit_footer">Sit</a></li>
+                        <li><a href="#eat" data-icon="carat-d" data-transition="none" class="eat_footer"></a></li>
+                        <li><a href="#sit" data-icon="clock" data-transition="none" class="sit_footer"></a></li>
+                        <li><a href="#yandex_page" data-icon="navigation" data-transition="none" class="yandex_footer"></a></li>
                         
                     </ul>
                 </div>
@@ -142,20 +145,29 @@
             </div>
 
 
-            <div id="eat_complete" class="ui-content" data-role="popup" data-theme="a">
-                <p id="question_complete">Вы сегодня большой молодец, так держать!</p>
-                <div class="ui-grid-a">
-                    <div class="ui-block-a">
-                        <a id="yes" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Продолжить</a>
-                    </div>
-                </div>
+        </div>
+
+        <div data-role="page" id="yandex_page">
+
+            <div role="main" class="ui-content">
+
+                <div id="YMapsID" style="width: 400px; height: 700px;"></div>
+
+
             </div>
 
-
-
-
-
+            <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#eat" data-icon="carat-d" data-transition="none" class="eat_footer"></a></li>
+                        <li><a href="#sit" data-icon="clock" data-transition="none" class="sit_footer"></a></li>
+                        <li><a href="#yandex_page" data-icon="navigation" data-transition="none" class="yandex_footer"></a></li>
+                        
+                    </ul>
+                </div>
+            </div>
         </div>
+
 
         <div data-role="page" id="sit">
 
@@ -169,8 +181,9 @@
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#eat" data-transition="none" class="eat_footer">Eat</a></li>
-                        <li><a href="#sit" data-transition="none" class="sit_footer">Sit</a></li>
+                        <li><a href="#eat" data-icon="carat-d" data-transition="none" class="eat_footer"></a></li>
+                        <li><a href="#sit" data-icon="clock" data-transition="none" class="sit_footer"></a></li>
+                        <li><a href="#yandex_page" data-icon="navigation" data-transition="none" class="yandex_footer"></a></li>
                         
                     </ul>
                 </div>
@@ -181,5 +194,35 @@
         <script src="cordova.js" type="text/javascript" ></script>
         <!-- This's  all yours uglify and minify scripts for production -->
         <script src="scripts/main.min.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+    
+            function init() {
+                var myMap = new ymaps.Map('YMapsID', {
+                        center: [53.9114, 27.607],
+                        zoom: 11,
+                        behaviors: ['default', 'scrollZoom']
+                    });
+                
+               var objects = ymaps.geoQuery(ymaps.geocode('Минск, просп. Независимости, 23'))
+
+                   .add(ymaps.geocode('Минск, ул. Немига, 12б'))
+                   .add(ymaps.geocode('Минск, ул. Сурганова, 63'))
+                   .add(ymaps.geocode('Минск, ул. Шугаева, 2'))
+                   .add(ymaps.geocode('Минск, тракт Логойский, 35'))
+                   .add(ymaps.geocode('Минск, ул. Притыцкого, 28'))
+                   .add(ymaps.geocode('Минск, Дзержинского просп., 96'))
+                   .add(ymaps.geocode('Минск (Мінск), проспект Независимости (праспект Незалежнасці), 23'))
+                   .add(ymaps.geocode('Минск (Мінск), Ленинградская улица (Ленінградская вуліца), 18'))
+                    .addToMap(myMap);
+                
+                objects.then(function () {
+                    objects.get(0).balloon.open();
+                });
+            }
+
+            ymaps.ready(init);
+
+        </script>
     </body>
 </html>

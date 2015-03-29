@@ -125,7 +125,7 @@
             $("#sit_timer_stop, #countdown").hide();
 
 
-            $('#eat, #tv, #sit').bind('pageshow', function() {
+            $('#eat, #yandex_page, #sit').bind('pageshow', function() {
                 var link = "." + $(this).attr("id") + "_footer";
                 $(".ui-navbar a").each(function(){
                     $(this).removeClass("active");
@@ -155,17 +155,6 @@
                     fontSize: 38
                 });
 
-
-                // }, function(){ 
-                //     if(that.isCordova()) {
-                //        navigator.accelerometer.clearWatch(watchID);
-                //        acc_init = {};
-                //        acc_check = {};
-                //        isFirst = true;
-                //     }
-                // });
-
-
                 if(that.isCordova()) {
 
                     var options = { frequency: 2000 };  // Update every 2 seconds
@@ -191,14 +180,16 @@
                                     $("#sit_timer_stop").hide();
                                     $("#countdown").hide();
                                     isFirst = true;
-                                    alert("Failed");
-
+                                    alert("Вы должны полностью расслабиться и не двигаться");
                             }
                         }
                     }
 
                     function onError(){
-                        navigator.accelerometer.clearWatch(watchID);
+                        if(navigator){
+                            navigator.accelerometer.clearWatch(watchID);
+                        }
+                       
                     }
                 }
             });
@@ -208,13 +199,18 @@
                 $("#sit_timer_stop").hide();
                 //$('#countdown').timeTo("stop");
                 $("#countdown").hide();
+                if(navigator){
+                    navigator.accelerometer.clearWatch(watchID);
+                }
+                
 
             });
 
 
            $( document ).on( "pagecreate", "#eat", function() {
-               // Swipe to remove list item
+
                 $( document ).on( "swipeleft swiperight", "#list li", function( event ) {
+                    console.log("Swipe");
                     var listitem = $( this ),
                         // These are the classnames used for the CSS transition
                         dir = event.type === "swipeleft" ? "left" : "right",
@@ -275,6 +271,12 @@
            });    
 
 
+
+        
+        
+
+       
+
      
 
 
@@ -308,7 +310,7 @@
                         navigator.notification.alert(
                             message,    // message
                             null,       // callback
-                            "Error",    // title
+                            "Внимание",    // title
                             'OK'        // buttonName
                         );
                     };
