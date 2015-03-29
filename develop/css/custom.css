@@ -169,7 +169,7 @@ ul.touch li.ui-li-has-alt a.ui-btn {
     font-size: inherit;
     margin-bottom: .75em;
 }
-#learn_1, #learn_2, #learn_3, #learn_4 {
+#learn_1, #learn_2, #learn_3, #learn_4, #sit {
 	background: #009688 !important; 
 }
 
@@ -211,17 +211,22 @@ ul.touch li.ui-li-has-alt a.ui-btn {
 }
 
 #sit p {
-	color: #212121; 
+	color: #FFFFFF; 
 }
 
 
-
-/*@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";*/
-
-/*body {
+#main_page {
   background: #39D;
 }
-*/
+
+/*#main_page .ui-link {
+  background: none;
+}*/
+
+
+
+
+
 .circular-menu {
   width: 250px;
   height: 250px;
@@ -275,18 +280,18 @@ ul.touch li.ui-li-has-alt a.ui-btn {
   left: calc(50% - 30px);
   text-decoration: none;
   text-align: center;
-  color: #444;
+  color: #444 !important;
   border-radius: 50%;
   display: block;
   height: 40px;
   width: 40px;
   line-height: 40px;
   padding: 10px;
-  background: #dde;
+  background: #dde !important;
 }
 
 .menu-button:hover {
-  background-color: #eef;
+  background-color: #eef !important;
 }
 
 /* Author stuff */
@@ -306,3 +311,27 @@ h1.author a:hover {
   color: #ddd;
 } 
 
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot');
+}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url(data:application/x-font-woff;charset=utf-8;base64,[BASE64_DATA_GOES_HERE]) format('woff'),
+         url('../fonts/fontawesome-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fa {
+  background-color: none;
+}
+
+#main_page .ui-btn, #main_page .ui-link, #main_page .ui-listview  {
+  background: none !important; 
+}
+
+[data-role=page] {
+ /* height: 100%;
+  min-height: 100%;*/
+}

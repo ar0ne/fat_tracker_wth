@@ -132,7 +132,7 @@
             $("#sit_timer_stop, #countdown").hide();
 
 
-            $('#eat, #yandex_page, #sit').bind('pageshow', function() {
+            $('#eat, #yandex_page, #sit, #main_page').bind('pageshow', function() {
                 var link = "." + $(this).attr("id") + "_footer";
                 $(".ui-navbar a").each(function(){
                     $(this).removeClass("active");
