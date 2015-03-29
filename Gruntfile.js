@@ -29,6 +29,7 @@ module.exports = function(grunt) {
               'bower_components/**/jquery.mobile-1.4.5.min.css',
               'develop/**/timeTo.css',
               'develop/**/custom.css',
+              'develop/**/font-awesome.min.css',
               '!develop/tmp/*',
             ],
         dest: 'develop/tmp/all.css',
