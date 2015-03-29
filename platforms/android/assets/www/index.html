@@ -88,7 +88,7 @@
         <div data-role="page" id="main_page">
 
             <div role="main" class="ui-content">
-                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                <div id="chartContainer" style="height: 600px; width: 400px;"></div>
             </div>
 
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
@@ -200,7 +200,7 @@
             function init() {
                 var myMap = new ymaps.Map('YMapsID', {
                         center: [53.9114, 27.607],
-                        zoom: 11,
+                        zoom: 10,
                         behaviors: ['default', 'scrollZoom']
                     });
                 
@@ -236,7 +236,10 @@
 
             }
 
-            ymaps.ready(init);
+            if(ymaps !== undefined) {
+                ymaps.ready(init);
+            }
+            
 
         </script>
     </body>

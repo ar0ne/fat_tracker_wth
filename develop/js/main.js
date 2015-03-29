@@ -53,29 +53,7 @@
 
 
         that.draw_canvas = function() {
-            var chart = new CanvasJS.Chart("chartContainer",
-                {
-                  title:{
-                    text: "Ваш прогресс"
-                  },
-                   data: [
-                  {
-                     type: "pie",
-                   showInLegend: true,
-                   dataPoints: [
-                   {  y: 12,  indexLabel: "Очаровательность" },
-                   {  y: 32,  indexLabel: "Неторопливость" },
-                   {  y: 22,  indexLabel: "Особые ниндзюцу" },
-                   {  y: 7,  indexLabel:  ""},
-                   {  y: 9,  indexLabel: "PSP" },
-                   {  y: 44,  indexLabel: "Nintendo 3DS"},
-                   {  y: 11,  indexLabel: "PS Vita"}
-                   ]
-                 }
-                 ]
-               });
 
-                chart.render();
         }
 
 

@@ -9,10 +9,6 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
                             "count": 1
                         },
@@ -26,6 +22,10 @@
                         },
                         {
                             "xml": "<feature name=\"YoikScreenOrientation\"><param name=\"android-package\" value=\"net.yoik.cordova.plugins.screenorientation.YoikScreenOrientation\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -44,9 +44,6 @@
         }
     },
     "installed_plugins": {
-        "org.apache.cordova.splashscreen": {
-            "PACKAGE_NAME": "org.ar0ne.fat_tracker"
-        },
         "org.apache.cordova.network-information": {
             "PACKAGE_NAME": "org.ar0ne.fat_tracker"
         },
@@ -57,6 +54,9 @@
             "PACKAGE_NAME": "org.ar0ne.fat_tracker"
         },
         "net.yoik.cordova.plugins.screenorientation": {
+            "PACKAGE_NAME": "org.ar0ne.fat_tracker"
+        },
+        "org.apache.cordova.splashscreen": {
             "PACKAGE_NAME": "org.ar0ne.fat_tracker"
         }
     },
