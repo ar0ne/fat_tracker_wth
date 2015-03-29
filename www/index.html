@@ -88,7 +88,7 @@
         <div data-role="page" id="main_page">
 
             <div role="main" class="ui-content">
-
+                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
             </div>
 
             <div data-role="footer" data-position="fixed" data-tap-toggle="false">
@@ -219,6 +219,21 @@
                 objects.then(function () {
                     objects.get(0).balloon.open();
                 });
+
+                myMap.geoObjects.add(
+                    new ymaps.Placemark(
+                        [ymaps.geolocation.latitude, ymaps.geolocation.longitude],
+                        {
+                            balloonContentHeader: ymaps.geolocation.country,
+                            balloonContent: ymaps.geolocation.city,
+                            balloonContentFooter: ymaps.geolocation.region
+                        },
+                        {
+                            preset: 'twirl#redIcon' 
+                        }
+                    )
+                );
+
             }
 
             ymaps.ready(init);

@@ -14,6 +14,9 @@
     <feature name="Accelerometer">
         <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
     </feature>
+    <feature name="YoikScreenOrientation">
+        <param name="android-package" value="net.yoik.cordova.plugins.screenorientation.YoikScreenOrientation" />
+    </feature>
     <name>Fat</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

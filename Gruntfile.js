@@ -13,10 +13,12 @@ module.exports = function(grunt) {
               'bower_components/**/jquery.min.js',
               'bower_components/**/jquery.mobile-1.4.5.min.js',
               'bower_components/**/fastclick.js',
+              'bower_components/**/Chart.min.js',
+
               
               // add other dependent scripts from bower.json
               // ... 
-
+              'develop/**/canvasjs.min.js',
               'develop/**/*.js', 
               '!develop/tmp/*', 
             ],

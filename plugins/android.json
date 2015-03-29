@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"YoikScreenOrientation\"><param name=\"android-package\" value=\"net.yoik.cordova.plugins.screenorientation.YoikScreenOrientation\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -50,6 +54,9 @@
             "PACKAGE_NAME": "org.ar0ne.fat_tracker"
         },
         "org.apache.cordova.device-motion": {
+            "PACKAGE_NAME": "org.ar0ne.fat_tracker"
+        },
+        "net.yoik.cordova.plugins.screenorientation": {
             "PACKAGE_NAME": "org.ar0ne.fat_tracker"
         }
     },

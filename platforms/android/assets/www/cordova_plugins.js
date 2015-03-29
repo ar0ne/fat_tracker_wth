@@ -49,6 +49,20 @@ module.exports = [
         "clobbers": [
             "navigator.accelerometer"
         ]
+    },
+    {
+        "file": "plugins/net.yoik.cordova.plugins.screenorientation/www/screenorientation.js",
+        "id": "net.yoik.cordova.plugins.screenorientation.screenorientation",
+        "clobbers": [
+            "cordova.plugins.screenorientation"
+        ]
+    },
+    {
+        "file": "plugins/net.yoik.cordova.plugins.screenorientation/www/screenorientation.android.js",
+        "id": "net.yoik.cordova.plugins.screenorientation.screenorientation.android",
+        "merges": [
+            "cordova.plugins.screenorientation"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -57,7 +71,8 @@ module.exports.metadata =
     "org.apache.cordova.splashscreen": "1.0.0",
     "org.apache.cordova.network-information": "0.2.15",
     "org.apache.cordova.dialogs": "0.3.0",
-    "org.apache.cordova.device-motion": "0.2.11"
+    "org.apache.cordova.device-motion": "0.2.11",
+    "net.yoik.cordova.plugins.screenorientation": "1.3.2"
 }
 // BOTTOM OF METADATA
 });

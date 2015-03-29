@@ -1,4 +1,5 @@
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/ant-build/classes.dex : \
+/home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/ant-build/classes/net/yoik/cordova/plugins/screenorientation/YoikScreenOrientation.class \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/ant-build/classes/org/ar0ne/fat_tracker/CordovaApp.class \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/ant-build/classes/org/ar0ne/fat_tracker/R$drawable.class \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/ant-build/classes/org/ar0ne/fat_tracker/R.class \

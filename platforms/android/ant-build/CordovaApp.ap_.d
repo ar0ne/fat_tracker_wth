@@ -40,6 +40,7 @@
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/org.apache.cordova.device-motion \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/org.apache.cordova.network-information \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/org.apache.cordova.dialogs \
+/home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/net.yoik.cordova.plugins.screenorientation \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www/splashscreen.js \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/org.apache.cordova.device-motion/www \
@@ -52,6 +53,9 @@
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www/notification.js \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www/android \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www/android/notification.js \
+/home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/net.yoik.cordova.plugins.screenorientation/www \
+/home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/net.yoik.cordova.plugins.screenorientation/www/screenorientation.js \
+/home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/plugins/net.yoik.cordova.plugins.screenorientation/www/screenorientation.android.js \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/scripts/main.min.js \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/styles/custom.min.css \
 /home/ar1/codes/Cordova Projects/fat_tracker/platforms/android/assets/www/images/plus.png \
